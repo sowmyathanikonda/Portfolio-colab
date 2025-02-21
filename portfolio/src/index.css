@@ -67,3 +67,25 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@keyframes jumble {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    transform: translate(-2px, -2px) rotate(-2deg);
+  }
+  50% {
+    transform: translate(2px, 2px) rotate(2deg);
+  }
+  75% {
+    transform: translate(-2px, 2px) rotate(-2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
+
+.animate-jumble {
+  animation: jumble 0.3s ease-in-out;
+}
