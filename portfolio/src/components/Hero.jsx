@@ -36,6 +36,7 @@ const Hero = () => {
       </button>
 
       {/* Logos Grid - White background with rounded smooth corners */}
+<<<<<<< Updated upstream
       <div className="bg-gray-100 mt-20\\
        sm:mt-4 rounded-lg p-6 sm:p-8 shadow-sm w-full max-w-6xl">
         <div className="bg-gray-100 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-10 items-center opacity-80">
@@ -71,6 +72,26 @@ const Hero = () => {
           />
         </div>
       </div>
+=======
+      <div className="bg-gray-100 mt-24 sm:mt-28 rounded-lg p-4 sm:p-6 shadow-sm w-full max-w-6xl mx-auto">
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 items-center justify-center">
+  
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="max-h-12 w-auto mx-auto object-contain filter brightness-0 saturate-100" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" className="max-h-12 w-auto mx-auto object-contain filter brightness-0 saturate-100" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" 
+    className="max-h-12 w-auto mx-auto object-contain filter brightness-[0.3] contrast-100" />
+
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" className="max-h-12 w-auto mx-auto object-contain filter brightness-3 saturate-100" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" className="max-h-12 w-auto mx-auto object-contain filter brightness-0 saturate-100" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike" className="max-h-12 w-auto mx-auto object-contain filter brightness-0 saturate-100" />
+
+
+  </div>
+</div>
+
+
+>>>>>>> Stashed changes
     </section>
   );
 };
