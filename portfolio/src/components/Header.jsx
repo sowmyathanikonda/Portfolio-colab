@@ -6,16 +6,15 @@ const Header = () => {
 
   const copyEmail = () => {
     navigator.clipboard.writeText("keenan@design@gmail.com").then(() => {
-      alert("Email copied to clipboard!"); // Optional: Notify the user
+      alert("Email copied to clipboard!");
     });
   };
 
   const downloadCV = () => {
-    // Replace this URL with the actual URL of your CV file
     const cvUrl = "https://example.com/path/to/cv.pdf";
     const link = document.createElement("a");
     link.href = cvUrl;
-    link.download = "Keenan_Ahmed_CV.pdf"; // Name of the downloaded file
+    link.download = "Keenan_Ahmed_CV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -24,18 +23,18 @@ const Header = () => {
   return (
     <header className="w-full px-4 sm:px-6 py-3 flex justify-between items-center bg-white shadow-md fixed top-0 left-0 z-50">
       {/* Left Side: Logo & Email & Buttons */}
-      <div className="flex items-center gap-6">
-        {/* Small Black Bird Logo with Fade-In Animation */}
+      <div className="flex items-center gap-4 sm:gap-6">
+        {/* Logo */}
         <div className="bg-white rounded-lg p-2 sm:p-3 flex items-center shadow-sm animate-fade-in">
           <img
-            src="https://t4.ftcdn.net/jpg/10/74/70/15/240_F_1074701502_f1oTt80nfldfHyv9Y8oLmyU3Er4in2Y0.jpg" // Black bird logo
+            src="https://t4.ftcdn.net/jpg/10/74/70/15/240_F_1074701502_f1oTt80nfldfHyv9Y8oLmyU3Er4in2Y0.jpg"
             alt="Logo"
-            className="w-10 h-10 sm:w- sm:h-10 object-contain"
+            className="w-10 h-10 object-contain"
           />
         </div>
 
-        {/* Profile section with light gray background and rounded edges */}
-        <div className="bg-gray-100 rounded-lg p-2 sm:p-3 flex items-center gap-4 shadow-sm">
+        {/* Email & Buttons (Hidden on Small Screens) */}
+        <div className="hidden sm:flex bg-gray-100 rounded-lg p-2 sm:p-3 items-center gap-4 shadow-sm">
           <span className="text-sm sm:text-base text-gray-600 truncate">
             keenan@design@gmail.com
           </span>
@@ -59,36 +58,63 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Toggle */}
+      {/* Mobile Menu Toggle (Always Visible on Mobile) */}
       <button
         className="sm:hidden text-gray-600 hover:text-gray-900 transition-all"
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        {menuOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
 
-      {/* Navigation Links with Slide-In Animation */}
+      {/* Navigation Links (Visible on Desktop, Toggle on Mobile) */}
       <nav
-        className={`absolute sm:static top-16 left-0 w-full sm:w-auto bg-white shadow-md sm:shadow-none flex flex-col sm:flex-row gap-2 sm:gap-4 p-4 sm:p-0 text-center transition-all duration-300 ease-in-out ${menuOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0 sm:translate-x-0 sm:opacity-100"} sm:flex`}
+        className={`absolute top-16 left-0 w-full bg-white shadow-md sm:static sm:w-auto sm:flex sm:items-center sm:shadow-none sm:p-0 sm:gap-4 transition-all duration-300 ease-in-out ${
+          menuOpen ? "block" : "hidden"
+        }`}
       >
-        <a
-          href="#"
-          className="text-xs sm:text-sm text-gray-600 hover:text-gray-900 transition-all hover:underline hover:scale-105"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="#"
-          className="text-xs sm:text-sm text-gray-600 hover:text-gray-900 transition-all hover:underline hover:scale-105"
-        >
-          Dribbble
-        </a>
-        <a
-          href="#"
-          className="text-xs sm:text-sm text-gray-600 hover:text-gray-900 transition-all hover:underline hover:scale-105"
-        >
-          Instagram
-        </a>
+        <div className="flex flex-col sm:flex-row items-center gap-4 p-4 sm:p-0">
+          <a
+            href="#"
+            className="text-sm text-gray-600 hover:text-gray-900 transition-all hover:underline hover:scale-105"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="#"
+            className="text-sm text-gray-600 hover:text-gray-900 transition-all hover:underline hover:scale-105"
+          >
+            Dribbble
+          </a>
+          <a
+            href="#"
+            className="text-sm text-gray-600 hover:text-gray-900 transition-all hover:underline hover:scale-105"
+          >
+            Instagram
+          </a>
+
+          {/* Show Email & Buttons in Mobile View */}
+          <div className="flex flex-col items-center sm:hidden gap-3 mt-4">
+            <span className="text-sm text-gray-600 truncate">
+              keenan@design@gmail.com
+            </span>
+            <div className="flex gap-2">
+              <button
+                onClick={copyEmail}
+                className="px-3 py-2 bg-white hover:bg-gray-200 rounded-full flex items-center gap-2 text-xs transition-all shadow-sm hover:scale-105"
+              >
+                <Copy size={14} />
+                <span>Copy</span>
+              </button>
+              <button
+                onClick={downloadCV}
+                className="px-3 py-2 bg-white hover:bg-gray-200 rounded-full flex items-center gap-2 text-xs transition-all shadow-sm hover:scale-105"
+              >
+                <FileText size={14} />
+                <span>CV</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
   );

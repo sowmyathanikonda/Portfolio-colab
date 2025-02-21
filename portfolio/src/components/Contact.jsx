@@ -20,7 +20,7 @@ const Contact = () => {
 
       {/* Buttons */}
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-        <button className="b bg-black text-white px-5 sm:px-6 py-2 sm:py-3 rounded-full flex items-center gap-2 hover:bg-gray-800 text-sm sm:text-base transition-all">
+        <button className="b  px-5 sm:px-6 py-2 sm:py-3 rounded-full flex items-center gap-2 hover:bg-gray-800 text-sm sm:text-base transition-all">
           <Mail size={16} />
           Email Me
         </button>
