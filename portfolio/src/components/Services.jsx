@@ -13,7 +13,7 @@ const ServiceCard = ({ icon: Icon, title, description }) => (
 
 const Services = () => {
   return (
-    <section className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 mt-40">
+    <section className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 mt-30">
       <h2 className="text-black text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
         Collaborate with brands and agencies<br />to create impactful results.
       </h2>
