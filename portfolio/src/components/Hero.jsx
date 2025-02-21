@@ -44,7 +44,7 @@ const Hero = () => {
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Nike_logo.svg" alt="Nike" className="h-10 sm:h-12 object-contain grayscale filter brightness-0" />
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Facebook_Logo_2023.svg" alt="Facebook" className="h-10 sm:h-12 object-contain grayscale filter brightness-0" />
           <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" className="h-10 sm:h-12 object-contain grayscale filter brightness-0" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" className="h-10 sm:h-12 object-contain grayscale filter brightness-0" />
+          <img src="" alt="LinkedIn" className="h-10 sm:h-12 object-contain grayscale filter brightness-0" />
         </div>
       </div>
     </section>
