@@ -5,8 +5,8 @@ const Hero = () => {
   return (
     <section className="flex flex-col items-center justify-center text-center h-screen w-full px-6 sm:px-12 lg:px-24 py-12 mt-16 sm:mt-20"> {/* Added margin-top */}
       {/* Profile Image - Positioned properly */}
-      <div className="relative mt-12 sm:mt-16 md:mt-20 flex justify-center">
-        <div className="bg-gray-100 rounded-lg p-4 sm:p-5 shadow-sm">
+      <div className="relative mt-44 sm:mt-16 md:mt-20 flex justify-center">
+        <div className="bg-gray-100  -20 rounded-lg p-4 sm:p-5 shadow-sm">
           <img
             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80"
             alt="Profile"
@@ -28,7 +28,7 @@ const Hero = () => {
       </h1>
 
       {/* Button */}
-      <button className="mt-8 bg-black text-white px-6 py-3 rounded-full inline-flex items-center gap-2 mx-auto hover:bg-gray-800 text-base sm:text-lg md:text-xl">
+      <button className="b mt-8 bg-black text-white px-6 py-3 rounded-full inline-flex items-center gap-2 mx-auto hover:bg-gray-800 text-base sm:text-lg md:text-xl">
         Latest Shots
         <span className="bg-white text-black rounded-full w-7 h-7 flex items-center justify-center text-sm">
           ↗
