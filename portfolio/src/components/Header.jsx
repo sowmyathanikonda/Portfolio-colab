@@ -27,12 +27,12 @@ const Header = () => {
       <div className="flex items-center gap-6">
         {/* Small Black Bird Logo with Fade-In Animation */}
         <div className="bg-white rounded-lg p-2 sm:p-3 flex items-center shadow-sm animate-fade-in">
-  <img
-    src="https://t4.ftcdn.net/jpg/10/74/70/15/240_F_1074701502_f1oTt80nfldfHyv9Y8oLmyU3Er4in2Y0.jpg" // Black bird logo
-    alt="Logo"
-    className="w-10 h-10 sm:w-10 sm:h-10 object-contain" // Increased size
-  />
-</div>
+          <img
+            src="https://t4.ftcdn.net/jpg/10/74/70/15/240_F_1074701502_f1oTt80nfldfHyv9Y8oLmyU3Er4in2Y0.jpg" // Black bird logo
+            alt="Logo"
+            className="w-10 h-10 sm:w- sm:h-10 object-contain"
+          />
+        </div>
 
         {/* Profile section with light gray background and rounded edges */}
         <div className="bg-gray-100 rounded-lg p-2 sm:p-3 flex items-center gap-4 shadow-sm">
